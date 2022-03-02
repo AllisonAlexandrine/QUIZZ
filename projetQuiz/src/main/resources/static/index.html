@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Quizz</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+       
+    </head>
+
+    <style type="text/css">
+        
+        .card-img-top {width:100%;height: 50%;}
+        .btn { width:100%;text-align:center; }
+        input, button, select, optgroup, textarea {width:100%;}
+        h2 {text-align: center;padding:1%;}
+  
+
+    </style>
+    <body>
+
+    	<a href="/rest">say quiz</a>
+
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container px-4 px-lg-5">
+                <h1 class="navbar-brand" href="#!">QUIZ POEC JAVA</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Gamer</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!">Subscrire</a></li>   
+                    </ul>
+                   
+                </div>
+            </div>
+        </nav>
+            <div class="container px-4 px-lg-5 mt-5">
+                <!-- Space questions-->
+   
+                <div class="container px-8  md-12 ">
+                    <div class="row gx-4 gx-lg-5 align-items-center ">
+                        <div class="col-md-4" style="text-align:center;">
+                            <figure>
+                                <figcaption>
+                                 <img class="card-img-top" src="assets/animatrice_avatar.png" alt="avatar" >
+                                  <a href="#" title="Lancer la lecture">
+                                    <img class="im_animatrice" style="width:25%;height:auto;" src="assets/play.png" alt="Lecture" id="btnplay">
+                                  </a>
+                                </figcaption>
+
+                                <audio style="display:none" id="player" controls="controls" src="questions/question1.mp3">
+                                    <code>audio</code> 
+                                    <source src="audio.mp3"></audio>
+                                </audio>
+                               
+                            </figure>   
+                        </div>
+                    </div>
+                </div>
+      
+            <!-- End Space questions--> 
+            <!-- Gamers 1-->
+                <h2 id="h2" >Questions 1</h2>
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+                    <div class="col mb-5" id="avatar1">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="assets/femme_avatar.png" alt="avatar" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                <h5 class="fw-bolder">
+                                    <a href="#" title="Mettre en pause">
+                                     <img style="width:25%;height:auto;" src="assets/pause.png" alt="Pause" id="btnpause1" style="float:left;" >
+                                    </a>
+                                </h5>
+                                <input id="joueur1" classe="input" type="text" name="reponse">
+                                </div>
+                            </div>
+                     
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="getValue1()" >ENTER</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5" id="avatar2">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="assets/homme_avatar.png" alt="avatar" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder"> <a href="#" title="Mettre en pause"><img style="padding:2%;width:25%;height:auto;" src="assets/pause.png" alt="Pause" id="btnpause2"></a></h5>
+                                    <input id="joueur2" classe="input" type="text" name="joueur2">
+                                </div>
+                            </div>
+                     
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="getValue2()">ENTER</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5" id="avatar3">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="assets/femme2_avatar.png" alt="avatar" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder"> <a href="#" title="Mettre en pause"><img style="padding:2%;width:25%;height:auto;" src="assets/pause.png" alt="Pause" id="btnpause3"></a></h5>
+                                    <input id="joueur3" classe="input" type="text" name="joueur3">
+                                </div>
+                            </div>
+                     
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="getValue3()">ENTER</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5" id="avatar4">
+                        <div class="card h-100">
+                            <img class="card-img-top" src="assets/homme2_avatar.png" alt="avatar" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <h5 class="fw-bolder"> <a href="#" title="Mettre en pause"><img style="padding:2%;width:25%;height:auto;" src="assets/pause.png" alt="Pause" id="btnpause4"></a></h5>
+                                    <input id="joueur4" classe="input" type="text" name="reponse">
+                                </div>
+                            </div>
+                     
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="getValue4();">ENTER</a></div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+     
+        <!-- End gammers -->
+
+                                
+            
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script>
+
+                joueurs = [
+                1, "assets/femme_avatar.png", 0, 1,
+                2, "assets/homme_avatar.png", 0, 1,
+                3,"assets/femme2_avatar.png",0, 1,
+                4,"assets/homme2_avatar.png",0, 1
+                ];
+
+                quizz = [
+                1, "questions/question1.mp3", "MOZART",
+                2, "questions/question2.mp3", "FRANCE",
+                3, "questions/question3.mp3", "VERSAILLE",
+                4, "questions/question4.mp3", "LION",
+                5, "questions/question5.mp3", "JAVA",
+                6, "questions/question6.mp3", "BONHEUR"
+                ];
+
+
+                duel = [
+                1, "questions/question1.mp3", "MOZART",0,
+                2, "questions/question2.mp3", "FRANCE",0
+                
+                ];
+
+                //console.log(duel);
+                 //alert(duel[3]) => gagnant1;
+                 //alert(duel[7]) => gagnant 2;
+
+                 //alert(joueurs[2]) score joeur1;
+                 // alert(joueurs[0]); // id joeur 2
+                 //alert(joueurs[6]) //score joeur2;
+                 //alert(joueurs[4]); // id joeur 2
+                 //alert(joueurs[10]); // score joeur3;
+                 // alert(joueurs[8]); // id joeur 3
+                 //alert(joueurs[14]) score joeur4;
+                 //alert(joueurs[12]); // id joeur 4
+
+                  //alert(quizz[1]) question 1; reponse quizz[2]
+                 //alert(quizz[4]) question 2;  reponse quizz[5]
+                 //alert(quizz[7]) question 3; reponse quizz[5]
+                 //alert(quizz[10]) question 4; reponse quizz[8]
+                 //alert(quizz[13]) question 5; reponse quizz[14]
+                 //alert(quizz[16]) quequizz 6; reponse quizz[17]
+
+                 // boucle question si pas
+
+
+                document.getElementById('btnplay').onclick = function() {
+                document.getElementById('player').play();
+                return false;
+
+                }
+
+                // BUZZER JOEURS
+                document.getElementById('btnpause1').onclick = function() {
+                document.getElementById('player').pause();
+                return false;
+                }
+
+                document.getElementById('btnpause2').onclick = function() {
+                document.getElementById('player').pause();
+                return false;
+
+                }
+
+                document.getElementById('btnpause3').onclick = function() {
+                document.getElementById('player').pause();
+                return false;
+                }
+                
+                document.getElementById('btnpause4').onclick = function() {
+                document.getElementById('player').pause();
+                return false;
+                }
+
+                qualif = 10;
+
+                // value JOUEURS 1 
+
+                function getValue1() {
+
+                    var reponse = quizz[2];
+                    var avatar = document.getElementById("avatar1");
+                    var input = document.getElementById("joueur1").value.toUpperCase();
+                  
+                    if (input === reponse) {
+                        joueurs[2] += 10;
+                        audio = document.getElementById("player");
+                        audio.setAttribute("src", quizz[4]);
+                        document.getElementById("h2").innerHTML = "Questions 2";
+                        audio.play(); 
+
+                        if (joueurs[2] === qualif && duel[3] === 0 ) {
+                        alert('vous etes selectionné');
+                        duel[3] = joueurs[0];
+                        avatar1.setAttribute("style", "display:none");
+                        console.log(duel);
+                        } else if (duel[7] === 0 && duel[3] !== 0 ) {
+                        duel[7] = joueurs[0]; // id gagnant
+                        avatar1.setAttribute("style", "display:none");
+                        }
+
+                    } else { document.getElementById('player').play(); }          
+
+                    if (duel[7] !== 0 && duel[3] !== 0 ) {
+                        alert("fin");
+                        // envoi duel en BD soit id des 2 gagnants pour duel
+                        document.getElementById('player').pause();
+
+                    }              
+                        
+                }
+
+
+                // value JOUEURS 2 
+
+
+                function getValue2() {
+                    var reponse = quizz[2];
+                    var avatar = document.getElementById("avatar2");
+                    var input = document.getElementById("joueur2").value.toUpperCase();
+                  
+                    if (input === reponse) {
+                        joueurs[6] += 10;
+                        audio = document.getElementById("player");
+                        audio.setAttribute("src", quizz[4]);
+                        document.getElementById("h2").innerHTML = "Questions 2";
+                        audio.play(); 
+
+                        if (joueurs[6] === qualif && duel[3] === 0 ) {
+                        alert('vous etes selectionné');
+                        duel[3] = joueurs[4];
+                        avatar2.setAttribute("style", "display:none");
+                        console.log(duel);
+                    } else if (duel[7] === 0 && duel[3] !== 0 ) {
+                        duel[7] = joueurs[4]; // id gagnant
+                        avatar2.setAttribute("style", "display:none");
+                    }
+
+
+                    } else { document.getElementById('player').play(); }
+
+                    
+
+                    if (duel[7] !== 0 && duel[3] !== 0 ) {
+                        alert("fin");
+                        // envoi duel en BD soit id des 2 gagnants pour duel
+                        document.getElementById('player').pause();
+
+                    }         
+                }
+
+                // JOUEUR 3 VALUE
+
+                function getValue3() {
+
+
+                var reponse = quizz[2];
+                    var avatar = document.getElementById("avatar3");
+                    var input = document.getElementById("joueur3").value.toUpperCase();
+                  
+                    if (input === reponse) {
+                        joueurs[10] += 10;
+                        audio = document.getElementById("player");
+                        audio.setAttribute("src", quizz[4]);
+                        document.getElementById("h2").innerHTML = "Questions 2";
+                        audio.play(); 
+
+                    } else { document.getElementById('player').play(); }
+
+                    if (joueurs[10] === qualif && duel[3] === 0 ) {
+                        
+                        duel[3] = joueurs[8];
+                        alert('vous etes selectionné' + duel);
+                        avatar3.setAttribute("style", "display:none");
+                        console.log(duel);
+                    } else if (duel[7] === 0 && duel[3] !== 0 ) {
+                        duel[7] = joueurs[8];
+                        avatar3.setAttribute("style", "display:none");
+                    }
+
+                    if (duel[7] !== 0 && duel[3] !== 0 ) {
+                        alert("fin");
+                        // envoi duel en BD soit id des 2 gagnants pour duel
+                        document.getElementById('player').pause();
+
+                    }               
+                }
+
+
+                // JOUEUR 4 VALUE
+
+                function getValue4() {
+               var reponse = quizz[2];
+                    var avatar = document.getElementById("avatar4");
+                    var input = document.getElementById("joueur4").value.toUpperCase();
+                  
+                    if (input === reponse) {
+                        joueurs[14] += 10;
+                        audio = document.getElementById("player");
+                        audio.setAttribute("src", quizz[4]);
+                        document.getElementById("h2").innerHTML = "Questions 2";
+                        audio.play(); 
+
+                    } else { document.getElementById('player').play(); }
+
+                    if (joueurs[14] === qualif && duel[3] === 0 ) {
+                        alert('vous etes selectionné');
+                        duel[3] = joueurs[12];
+                        avatar4.setAttribute("style", "display:none");
+                        console.log(duel);
+                    } else if (duel[7] === 0 && duel[3] !== 0 ) {
+                        duel[7] = joueurs[12];
+                        avatar4.setAttribute("style", "display:none");
+                    }
+
+                    if (duel[7] !== 0 && duel[3] !== 0 ) {
+                        alert("fin");
+                        // envoi duel en BD soit id des 2 gagnants pour duel
+                        document.getElementById('player').pause();
+
+                    }               
+                }
+
+
+        </script>
+
+</body>
+
+</html>
